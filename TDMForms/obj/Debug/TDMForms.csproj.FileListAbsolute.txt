@@ -1,0 +1,16 @@
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\bin\Debug\TDMForms.exe.config
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\bin\Debug\TDMForms.exe
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\bin\Debug\TDMForms.pdb
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\bin\Debug\TDMLibrary.dll
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\bin\Debug\TDMLibrary.pdb
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.csprojResolveAssemblyReference.cache
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.MainForm.resources
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.Properties.Resources.resources
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.csproj.GenerateResource.cache
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.csproj.CoreCompileInputs.cache
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.csproj.CopyComplete
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.exe
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.pdb
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.AddTaskForm.resources
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\bin\Debug\Dapper.dll
+C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMForms\bin\Debug\Dapper.xml
