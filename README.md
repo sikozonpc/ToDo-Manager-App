@@ -9,13 +9,16 @@ Code for the open source project ToDo Manager, an app
 ## Completed
 SQL data storage added.
 
+Text file data storage.
+
 Simple UI's created and implemented.
 
 Most of the code in the library.
 
 
+
 ## To Do
-Text file data storage.
+
 
 Complete the UI with a cleaner and professional look.
 
