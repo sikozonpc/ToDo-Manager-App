@@ -13,6 +13,6 @@ namespace TDMLibrary.DataAccess
 
         List<TaskModel> GetTaskModelsData();
 
-        TaskModel RemoveTask(TaskModel task);
+        void RemoveTask(TaskModel task);
     }
 }

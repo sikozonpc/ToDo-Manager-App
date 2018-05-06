@@ -100,7 +100,7 @@
             // 
             this.dateTimePicker.Location = new System.Drawing.Point(162, 179);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(374, 20);
+            this.dateTimePicker.Size = new System.Drawing.Size(383, 20);
             this.dateTimePicker.TabIndex = 8;
             // 
             // AddTaskForm

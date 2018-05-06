@@ -43,21 +43,25 @@ namespace TDMLibrary.DataAccess
         }
 
 
-        public TaskModel RemoveTask(TaskModel task)
+        public void RemoveTask(TaskModel task)
         {
             List<TaskModel> tasks = TaskModels_File.FullFilePath().LoadFile().ConvertToTaskModel();
 
-
-            foreach(TaskModel t in tasks)
+            foreach (TaskModel t in tasks)
             {
-                if (t.Name == task.Name && t.Descritpion == task.Descritpion && t.Id == task.Id)
+                if (task.Name == t.Name && task.Descritpion == t.Descritpion)
                 {
-                    // Remove from the txt file 
+                    tasks.Remove(t);
+
                     t.RemoveTaskModelFromFile(TaskModels_File);
+
+                    return;
                 }
             }
 
-            return task;
+            return;
         }
+
+
     }
 }

@@ -7,3 +7,12 @@ C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMLibrary\obj\Debug\TDMLibrary
 C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMLibrary\bin\Debug\Dapper.dll
 C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMLibrary\bin\Debug\Dapper.xml
 C:\Users\Sikoz\source\repos\ToDoManager Solution\TDMLibrary\obj\Debug\TDMLibrary.csproj.CopyComplete
+C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMLibrary\bin\Debug\TDMLibrary.dll
+C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMLibrary\bin\Debug\TDMLibrary.pdb
+C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMLibrary\bin\Debug\Dapper.dll
+C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMLibrary\bin\Debug\Dapper.xml
+C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMLibrary\obj\Debug\TDMLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMLibrary\obj\Debug\TDMLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMLibrary\obj\Debug\TDMLibrary.csproj.CopyComplete
+C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMLibrary\obj\Debug\TDMLibrary.dll
+C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMLibrary\obj\Debug\TDMLibrary.pdb

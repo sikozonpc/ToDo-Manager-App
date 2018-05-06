@@ -36,14 +36,14 @@ namespace TDMForms
             }
             else
             {
-                // Removes the spaces from the text boxes so it doesnt mess with the data
-                taskDescriptionValue.Text = RemoveSpaces(taskDescriptionValue.Text);
-                taskNameValue.Text = RemoveSpaces(taskNameValue.Text);
+                // Removes the lines from the text boxes so it doesnt mess with the data
+                taskDescriptionValue.Text = RemoveLines(taskDescriptionValue.Text);
+                taskNameValue.Text = RemoveLines(taskNameValue.Text);
 
                 // Create a new TaskModel if succeded
                 TaskModel task = new TaskModel(taskNameValue.Text,
                     taskDescriptionValue.Text,
-                    dateTimePicker.Value,
+                    dateTimePicker.Value.ToShortDateString(),
                     false);
 
                 // Send the TaskModel to the database
@@ -58,7 +58,7 @@ namespace TDMForms
             } 
         }
 
-        public string RemoveSpaces(string line)
+        public string RemoveLines(string line)
         {
 
             string result = Regex.Replace(line, @"\r\n", " ");

@@ -14,7 +14,7 @@ namespace TDMLibrary.Models
 
         public string Descritpion { get; set; }
 
-        public DateTime FinishDay { get; set; }
+        public string FinishDay { get; set; }
 
         public bool Completed { get; set; }
 
@@ -23,7 +23,7 @@ namespace TDMLibrary.Models
 
         }
 
-        public TaskModel(string name, string description, DateTime finishDay, bool completed)
+        public TaskModel(string name, string description, string finishDay, bool completed)
         {
             Name = name;
             Descritpion = description;

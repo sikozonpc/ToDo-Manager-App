@@ -54,8 +54,9 @@ namespace TDMLibrary.DataAccess
                 model.Id = int.Parse(cols[0]);
                 model.Name = cols[1];
                 model.Descritpion = cols[2];
+                model.FinishDay = cols[3];
                 // TODO convert bool
-                model.Completed = Boolean.Parse(cols[3]);
+                model.Completed = Boolean.Parse(cols[4]);
                 
                 output.Add(model);
             }
@@ -70,7 +71,7 @@ namespace TDMLibrary.DataAccess
 
             foreach(TaskModel task in tasks)
             {
-                lines.Add($"{ task.Id }| { task.Name }| { task.Descritpion }| { task.Completed }");
+                lines.Add($"{ task.Id }| { task.Name }| { task.Descritpion }| { task.FinishDay }| { task.Completed }");
 
                 File.WriteAllLines(fileName.FullFilePath(), lines);
             }
@@ -78,7 +79,8 @@ namespace TDMLibrary.DataAccess
 
         public static void RemoveTaskModelFromFile(this TaskModel task, string fileName)
         {
-           // REMove
+            File.Replace(fileName.FullFilePath() , task.Name, "ERROR");
+
         }
     }
 }

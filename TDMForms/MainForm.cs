@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -44,7 +45,7 @@ namespace TDMForms
             // Update the listbox on the UI
             foreach (TaskModel task in tasks)
             {
-                taskListBox.Items.Add(task.Name + " : " + task.Descritpion + "  for  " + task.FinishDay);
+                taskListBox.Items.Add(task.Name + " : " + task.Descritpion + "  >  " + task.FinishDay);
             }
 
         }
@@ -57,11 +58,36 @@ namespace TDMForms
 
         private void removeTaskButton_Click(object sender, EventArgs e)
         {
+            string selectedText = (string)taskListBox.SelectedItem;
+
+            // Transforms the selected item into a task model
+            string[] temp = selectedText.Split(':');
+            string[] temp1 = temp[1].Split('>');
             
 
-            // Send the task we selected to the DeleteTaskModel(desired_task)
-            
-            // connector.DeleteTaskModel();
+            TaskModel task = new TaskModel(RemoveSpaces(temp[0]), TrimEnds(temp1[0], ' '), RemoveSpaces(temp1[1]), true);
+
+
+            if ( task != null)
+            {
+                GlobalConfig.Connection.RemoveTask(task);
+            }
+        }
+
+        public string RemoveSpaces(string line)
+        {
+
+            string result = Regex.Replace(line, " " , "");
+
+
+            return result;
+        }
+
+        public string TrimEnds(string line, char trim_char)
+        {
+            string result = line.TrimEnd(trim_char).TrimStart(trim_char);
+
+            return result;
         }
     }
 }       
