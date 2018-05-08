@@ -76,7 +76,8 @@ namespace TDMLibrary.DataAccess
             return tasks;
         }
 
-        public void RemoveTask(TaskModel task)
+
+        public void RemoveTask(TaskModel task, List<TaskModel> tasksList = null)
         {
             throw new NotImplementedException();
             // Connection to the database

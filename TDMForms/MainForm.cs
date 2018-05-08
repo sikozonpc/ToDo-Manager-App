@@ -17,9 +17,16 @@ namespace TDMForms
 {
     public partial class MainForm : Form
     {
+        // Data source for the listbox
+        private List<TaskModel> allTaks = GlobalConfig.Connection.GetTaskModelsData();
+
+
         public MainForm()
         {
             InitializeComponent();
+
+            taskListBox.DataSource = allTaks;
+            taskListBox.DisplayMember = "DisplayProperties";
 
             updateListBox();
         }
@@ -33,61 +40,39 @@ namespace TDMForms
 
         public void addToListBox(TaskModel task)
         {
-            taskListBox.Items.Add(task.Name +" : "+ task.Descritpion + "  for  "+ task.FinishDay);   
+            allTaks.Add(task);
+
+            updateListBox();
         }
 
 
         public void updateListBox()
         {
-            // List placeholder that will be populated from the dataset 
-            List<TaskModel> tasks = GlobalConfig.Connection.GetTaskModelsData();
+            taskListBox.DataSource = null;
 
-            // Update the listbox on the UI
-            foreach (TaskModel task in tasks)
-            {
-                taskListBox.Items.Add(task.Name + " : " + task.Descritpion + "  >  " + task.FinishDay);
-            }
-
+            taskListBox.DataSource = allTaks;
+            taskListBox.DisplayMember = "DisplayProperties";
         }
 
         private void completeTaskButton_Click(object sender, EventArgs e)
         {
-            taskListBox.Items.Remove(sender);
+            // TODO - Wire up complete task button 
         }
 
 
         private void removeTaskButton_Click(object sender, EventArgs e)
         {
-            string selectedText = (string)taskListBox.SelectedItem;
+            TaskModel task = (TaskModel)taskListBox.SelectedItem;
 
-            // Transforms the selected item into a task model
-            string[] temp = selectedText.Split(':');
-            string[] temp1 = temp[1].Split('>');
-            
-
-            TaskModel task = new TaskModel(RemoveSpaces(temp[0]), TrimEnds(temp1[0], ' '), RemoveSpaces(temp1[1]), true);
-
-
+           
             if ( task != null)
             {
-                GlobalConfig.Connection.RemoveTask(task);
+                allTaks.Remove(task);
+                GlobalConfig.Connection.RemoveTask(task, allTaks);
+
+                updateListBox();
             }
         }
 
-        public string RemoveSpaces(string line)
-        {
-
-            string result = Regex.Replace(line, " " , "");
-
-
-            return result;
-        }
-
-        public string TrimEnds(string line, char trim_char)
-        {
-            string result = line.TrimEnd(trim_char).TrimStart(trim_char);
-
-            return result;
-        }
     }
 }       

@@ -51,6 +51,8 @@ namespace TDMLibrary.DataAccess
 
                 TaskModel model = new TaskModel();
 
+                // TODO - Error Cheking 
+
                 model.Id = int.Parse(cols[0]);
                 model.Name = cols[1];
                 model.Descritpion = cols[2];
@@ -71,16 +73,23 @@ namespace TDMLibrary.DataAccess
 
             foreach(TaskModel task in tasks)
             {
-                lines.Add($"{ task.Id }| { task.Name }| { task.Descritpion }| { task.FinishDay }| { task.Completed }");
+                lines.Add($"{ task.Id }|{ task.Name }|{ task.Descritpion }|{ task.FinishDay }|{ task.Completed }");
 
                 File.WriteAllLines(fileName.FullFilePath(), lines);
             }
         }
 
-        public static void RemoveTaskModelFromFile(this TaskModel task, string fileName)
+        public static void RemoveTaskFromFile(this List<TaskModel> tasks, TaskModel task, string fileName)
         {
-            File.Replace(fileName.FullFilePath() , task.Name, "ERROR");
+            List<string> lines = new List<string>();
 
+            foreach (TaskModel t in tasks)
+            {
+                lines.Add($"{ t.Id }|{ t.Name }|{ t.Descritpion }|{ t.FinishDay }|{ t.Completed }");
+            }
+
+            File.WriteAllLines(fileName.FullFilePath(), lines);
         }
+
     }
 }

@@ -18,6 +18,17 @@ namespace TDMLibrary.Models
 
         public bool Completed { get; set; }
 
+        /// <summary>
+        /// Property that will represent a TaskModel in the tasklist of the dashboard
+        /// </summary>
+        public string DisplayProperties
+        {
+            get
+            {
+                return $" ({ Id }) { Name }: { Descritpion} > { FinishDay } ";
+            }
+        }
+
         public TaskModel()
         {
 

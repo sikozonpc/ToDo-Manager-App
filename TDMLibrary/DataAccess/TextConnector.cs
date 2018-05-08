@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,25 +44,9 @@ namespace TDMLibrary.DataAccess
         }
 
 
-        public void RemoveTask(TaskModel task)
+        public void RemoveTask(TaskModel task, List<TaskModel> tasksList)
         {
-            List<TaskModel> tasks = TaskModels_File.FullFilePath().LoadFile().ConvertToTaskModel();
-
-            foreach (TaskModel t in tasks)
-            {
-                if (task.Name == t.Name && task.Descritpion == t.Descritpion)
-                {
-                    tasks.Remove(t);
-
-                    t.RemoveTaskModelFromFile(TaskModels_File);
-
-                    return;
-                }
-            }
-
-            return;
+            tasksList.RemoveTaskFromFile(task, TaskModels_File);
         }
-
-
     }
 }
