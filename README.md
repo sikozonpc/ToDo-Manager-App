@@ -26,7 +26,6 @@ Modulize better the code.
 
 Completed button.
 
-Remove button.
 
 
 ## Future To Do'
