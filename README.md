@@ -1,5 +1,5 @@
 # ToDo-Manager-App
-Code for the open source project ToDo Manager, an app
+Code for the open source project ToDo Manager, (not the final name, haven't tought of one) 
 
 
 
@@ -19,6 +19,11 @@ Most of the code in the library.
 
 ## To Do
 
+Priority orginazation
+
+Add Tags.
+
+Option to send to mail.
 
 Complete the UI with a cleaner and professional look.
 
@@ -26,6 +31,13 @@ Modulize better the code.
 
 Completed button.
 
+Sync with the database and cloud.
+
+Add Reminders.
+
+Add themes.
+
+Add Databackup option.
 
 
 ## Future To Do'
