@@ -28,7 +28,15 @@ namespace TDMForms
             taskListBox.DataSource = allTaks;
             taskListBox.DisplayMember = "DisplayProperties";
 
+
             updateListBox();
+
+            GenerateButtons();
+        }
+
+        public void AddNewItem()
+        {
+
         }
 
         private void addNewTaskButton_Click(object sender, EventArgs e)
@@ -43,6 +51,8 @@ namespace TDMForms
             allTaks.Add(task);
 
             updateListBox();
+
+            
         }
 
 
@@ -74,5 +84,48 @@ namespace TDMForms
             }
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        // TODO - TaskIndex in the GenerateButtons()
+        private void buttClick(object sender, EventArgs e)
+        {
+
+            string text = allTaks[0].Descritpion;
+
+            TaskInfo taskInfo = new TaskInfo(text);
+            taskInfo.Show();
+
+
+        }
+
+        public void GenerateButtons()
+        {
+            int increment = 0;
+            
+            for(int i = 0; i <= allTaks.Count; i++)
+            {
+                Button but = new Button();
+                but.Name = "descriptionButton";
+                but.BackColor = Color.White;
+                but.Text = "+";
+                but.Size = new System.Drawing.Size(50, 25);
+
+                System.Drawing.Point locat = new System.Drawing.Point(50 , 70 + increment);
+
+                but.Location = locat;
+                but.Show();
+                but.BringToFront();
+
+                but.Click += new EventHandler(buttClick);
+                
+                increment += 28;
+
+                Controls.Add(but);
+            }
+            
+        }
     }
 }       
