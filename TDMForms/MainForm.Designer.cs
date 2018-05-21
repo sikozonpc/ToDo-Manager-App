@@ -37,6 +37,7 @@ namespace TDMForms
             this.removeTaskButton = new System.Windows.Forms.Button();
             this.completeTaskButton = new System.Windows.Forms.Button();
             this.taskListBox = new System.Windows.Forms.ListBox();
+            this.datesListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // addNewTaskButton
@@ -84,21 +85,34 @@ namespace TDMForms
             // taskListBox
             // 
             this.taskListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.taskListBox.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskListBox.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskListBox.FormattingEnabled = true;
             this.taskListBox.HorizontalScrollbar = true;
-            this.taskListBox.ItemHeight = 28;
-            this.taskListBox.Location = new System.Drawing.Point(108, 68);
+            this.taskListBox.ItemHeight = 22;
+            this.taskListBox.Location = new System.Drawing.Point(12, 69);
             this.taskListBox.Name = "taskListBox";
-            this.taskListBox.Size = new System.Drawing.Size(447, 504);
+            this.taskListBox.Size = new System.Drawing.Size(260, 132);
             this.taskListBox.TabIndex = 10;
+            // 
+            // datesListBox
+            // 
+            this.datesListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datesListBox.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datesListBox.FormattingEnabled = true;
+            this.datesListBox.HorizontalScrollbar = true;
+            this.datesListBox.ItemHeight = 22;
+            this.datesListBox.Location = new System.Drawing.Point(278, 69);
+            this.datesListBox.Name = "datesListBox";
+            this.datesListBox.Size = new System.Drawing.Size(113, 132);
+            this.datesListBox.TabIndex = 11;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(550, 591);
+            this.ClientSize = new System.Drawing.Size(522, 591);
+            this.Controls.Add(this.datesListBox);
             this.Controls.Add(this.taskListBox);
             this.Controls.Add(this.completeTaskButton);
             this.Controls.Add(this.removeTaskButton);
@@ -107,7 +121,6 @@ namespace TDMForms
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "To Do - Task Manager";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -124,6 +137,7 @@ namespace TDMForms
         private System.Windows.Forms.Button completeTaskButton;
         private System.Windows.Forms.Button addNewTaskButton;
         private System.Windows.Forms.ListBox taskListBox;
+        private System.Windows.Forms.ListBox datesListBox;
     }
 }
 

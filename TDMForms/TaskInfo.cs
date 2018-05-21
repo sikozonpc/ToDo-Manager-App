@@ -19,6 +19,9 @@ namespace TDMForms
             infoTextBox.Text = description;
         }
 
-    
+        private void infoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

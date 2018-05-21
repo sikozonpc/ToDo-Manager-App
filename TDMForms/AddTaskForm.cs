@@ -46,9 +46,8 @@ namespace TDMForms
                     dateTimePicker.Value.ToShortDateString(),
                     false);
 
-                // Send the TaskModel to the database
+                // Send the TaskModel to the data saving type
                 GlobalConfig.Connection.CreateTaskModel(task);
-
 
                 // calls the  addToListBox method in the main form
                 _mainForm.addToListBox(task);

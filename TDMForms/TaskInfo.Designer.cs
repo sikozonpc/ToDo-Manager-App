@@ -38,6 +38,7 @@
             this.infoTextBox.Size = new System.Drawing.Size(400, 126);
             this.infoTextBox.TabIndex = 0;
             this.infoTextBox.Text = "";
+            this.infoTextBox.TextChanged += new System.EventHandler(this.infoTextBox_TextChanged);
             // 
             // TaskInfo
             // 
@@ -47,6 +48,7 @@
             this.Controls.Add(this.infoTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "TaskInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TaskInfo";
             this.ResumeLayout(false);
 
