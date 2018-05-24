@@ -38,6 +38,7 @@ namespace TDMForms
             this.completeTaskButton = new System.Windows.Forms.Button();
             this.taskListBox = new System.Windows.Forms.ListBox();
             this.datesListBox = new System.Windows.Forms.ListBox();
+            this.MainFormTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // addNewTaskButton
@@ -48,7 +49,7 @@ namespace TDMForms
             this.addNewTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewTaskButton.ForeColor = System.Drawing.Color.Transparent;
             this.addNewTaskButton.Image = ((System.Drawing.Image)(resources.GetObject("addNewTaskButton.Image")));
-            this.addNewTaskButton.Location = new System.Drawing.Point(134, 3);
+            this.addNewTaskButton.Location = new System.Drawing.Point(12, 69);
             this.addNewTaskButton.Name = "addNewTaskButton";
             this.addNewTaskButton.Size = new System.Drawing.Size(43, 53);
             this.addNewTaskButton.TabIndex = 1;
@@ -62,7 +63,7 @@ namespace TDMForms
             this.removeTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeTaskButton.ForeColor = System.Drawing.Color.White;
             this.removeTaskButton.Image = ((System.Drawing.Image)(resources.GetObject("removeTaskButton.Image")));
-            this.removeTaskButton.Location = new System.Drawing.Point(183, -4);
+            this.removeTaskButton.Location = new System.Drawing.Point(3, 118);
             this.removeTaskButton.Name = "removeTaskButton";
             this.removeTaskButton.Size = new System.Drawing.Size(73, 67);
             this.removeTaskButton.TabIndex = 2;
@@ -74,7 +75,7 @@ namespace TDMForms
             this.completeTaskButton.BackColor = System.Drawing.Color.Maroon;
             this.completeTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.completeTaskButton.ForeColor = System.Drawing.Color.White;
-            this.completeTaskButton.Location = new System.Drawing.Point(286, 18);
+            this.completeTaskButton.Location = new System.Drawing.Point(12, 191);
             this.completeTaskButton.Name = "completeTaskButton";
             this.completeTaskButton.Size = new System.Drawing.Size(58, 22);
             this.completeTaskButton.TabIndex = 4;
@@ -89,10 +90,11 @@ namespace TDMForms
             this.taskListBox.FormattingEnabled = true;
             this.taskListBox.HorizontalScrollbar = true;
             this.taskListBox.ItemHeight = 22;
-            this.taskListBox.Location = new System.Drawing.Point(12, 69);
+            this.taskListBox.Location = new System.Drawing.Point(82, 69);
             this.taskListBox.Name = "taskListBox";
-            this.taskListBox.Size = new System.Drawing.Size(260, 132);
+            this.taskListBox.Size = new System.Drawing.Size(281, 528);
             this.taskListBox.TabIndex = 10;
+            this.taskListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.taskListBox_MouseDoubleClick);
             // 
             // datesListBox
             // 
@@ -101,27 +103,39 @@ namespace TDMForms
             this.datesListBox.FormattingEnabled = true;
             this.datesListBox.HorizontalScrollbar = true;
             this.datesListBox.ItemHeight = 22;
-            this.datesListBox.Location = new System.Drawing.Point(278, 69);
+            this.datesListBox.Location = new System.Drawing.Point(359, 69);
             this.datesListBox.Name = "datesListBox";
-            this.datesListBox.Size = new System.Drawing.Size(113, 132);
+            this.datesListBox.Size = new System.Drawing.Size(113, 528);
             this.datesListBox.TabIndex = 11;
+            // 
+            // MainFormTitle
+            // 
+            this.MainFormTitle.AutoSize = true;
+            this.MainFormTitle.Font = new System.Drawing.Font("Hobo Std", 45F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainFormTitle.Location = new System.Drawing.Point(-3, -4);
+            this.MainFormTitle.Name = "MainFormTitle";
+            this.MainFormTitle.Size = new System.Drawing.Size(309, 85);
+            this.MainFormTitle.TabIndex = 25;
+            this.MainFormTitle.Text = "ToDo App";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(522, 591);
+            this.ClientSize = new System.Drawing.Size(474, 591);
             this.Controls.Add(this.datesListBox);
             this.Controls.Add(this.taskListBox);
             this.Controls.Add(this.completeTaskButton);
             this.Controls.Add(this.removeTaskButton);
             this.Controls.Add(this.addNewTaskButton);
+            this.Controls.Add(this.MainFormTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "To Do - Task Manager";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -138,6 +152,7 @@ namespace TDMForms
         private System.Windows.Forms.Button addNewTaskButton;
         private System.Windows.Forms.ListBox taskListBox;
         private System.Windows.Forms.ListBox datesListBox;
+        private System.Windows.Forms.Label MainFormTitle;
     }
 }
 

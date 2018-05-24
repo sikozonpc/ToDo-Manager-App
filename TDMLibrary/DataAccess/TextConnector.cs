@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TDMLibrary.Models;
 
 namespace TDMLibrary.DataAccess
@@ -11,7 +7,7 @@ namespace TDMLibrary.DataAccess
     public class TextConnector : IDataConnection
     {
         private const string TaskModels_File = "TaskModels.csv";
-        
+
         /// <summary>
         /// Saves to a text file and returns a TaskModel
         /// </summary>
@@ -47,6 +43,25 @@ namespace TDMLibrary.DataAccess
         public void RemoveTask(TaskModel task, List<TaskModel> tasksList)
         {
             tasksList.RemoveTaskFromFile(task, TaskModels_File);
+        }
+
+        public void ChangeDescription(int taskId, string description)
+        {
+            
+            List<TaskModel> tasks = TaskModels_File.FullFilePath().LoadFile().ConvertToTaskModel();
+
+            foreach (TaskModel t in tasks)
+            {
+                if (t.Id == taskId)
+                {
+                    t.Descritpion = description;
+
+                    tasks.SaveToTaskModelsFile(TaskModels_File);
+
+
+                }
+
+            }
         }
     }
 }

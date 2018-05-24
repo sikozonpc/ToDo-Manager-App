@@ -14,5 +14,7 @@ namespace TDMLibrary.DataAccess
         List<TaskModel> GetTaskModelsData();
 
         void RemoveTask(TaskModel task, List<TaskModel> tasksList = null );
+
+        void ChangeDescription(int taskId, string description);
     }
 }

@@ -20,23 +20,29 @@ namespace TDMForms
         // Data source for the listbox
         public List<TaskModel> allTaks = GlobalConfig.Connection.GetTaskModelsData();
 
-        private int lastYPosition = 0;
-        private int increment = 25;
+        private Timer timer1;
 
+        //private int lastYPosition = 0;
+        //private int increment = 25;
 
+        
         public MainForm()
         {
             InitializeComponent();
 
             taskListBox.DataSource = allTaks;
             datesListBox.DataSource = allTaks;
-            taskListBox.DisplayMember = "DisplayProperties";
+            taskListBox.DisplayMember = "Name";
             datesListBox.DisplayMember = "FinishDay";
 
 
             updateListBox();
+            InitLoop();
+            
 
-
+            /*
+             *  Dynanic button task info generation system  got replaced by double click
+             *  
             // Generate buttons 
             int padding = 0;
             foreach (TaskModel task in allTaks)
@@ -47,8 +53,21 @@ namespace TDMForms
 
             lastYPosition = padding;
             increment = 0;
+            */
         }
 
+        public void InitLoop()
+        {
+            timer1 = new Timer();
+            timer1.Tick += new EventHandler(timer1_Tick);
+            timer1.Interval = 2000; // in miliseconds
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            updateListBox();
+        }
 
         private void addNewTaskButton_Click(object sender, EventArgs e)
         {
@@ -63,7 +82,7 @@ namespace TDMForms
 
             updateListBox();
 
-            GenerateInfoButton(task.Id, task.Descritpion, 0, lastYPosition + increment);
+            //GenerateInfoButton(task.Id, task.Descritpion, 0, lastYPosition + increment);
 
         }
 
@@ -79,10 +98,6 @@ namespace TDMForms
             datesListBox.DisplayMember = "FinishDay";
         }
 
-        public void organizeInfoButtons()
-        {
-
-        }
 
         private void completeTaskButton_Click(object sender, EventArgs e)
         {
@@ -107,20 +122,22 @@ namespace TDMForms
                     if (item.Name == task.Id.ToString())
                         Controls.Remove(item);
                 }
-
-                organizeInfoButtons();
             }
         }
 
 
-        private void buttClick(object sender, EventArgs e, string description)
+        private void CreateTaskInfoWindow(int id, string name, string description)
         {
         
-            TaskInfo taskInfo = new TaskInfo(description);
+            TaskInfo taskInfo = new TaskInfo(this ,id ,name, description);
             taskInfo.Show();
 
         }
 
+        /* 
+         *  Dynanic button task info generation system  got replaced by double click
+         *  
+         *  
         public void GenerateInfoButton(int id, string description, int x_increment, int y_increment)
         {
             Button but = new Button();
@@ -141,8 +158,13 @@ namespace TDMForms
             Controls.Add(but);
             
         }
+        */
 
+        private void taskListBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            TaskModel selectedItem = (TaskModel)taskListBox.SelectedItem;
+            CreateTaskInfoWindow(selectedItem.Id ,selectedItem.Name, selectedItem.Descritpion);
 
-
+        }
     }
 }       

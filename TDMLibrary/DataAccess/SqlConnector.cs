@@ -80,8 +80,14 @@ namespace TDMLibrary.DataAccess
         public void RemoveTask(TaskModel task, List<TaskModel> tasksList = null)
         {
             throw new NotImplementedException();
-            // Connection to the database
+            // TODO - Connection to the database
             // Delete in the database 
+        }
+
+        public void ChangeDescription(int taskId, string description)
+        {
+            //TODO - ChangeDescription SQL
+            throw new NotImplementedException();
         }
     }
 }
