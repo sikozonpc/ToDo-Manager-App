@@ -20,7 +20,6 @@ namespace TDMForms
         // Data source for the listbox
         public List<TaskModel> allTaks = GlobalConfig.Connection.GetTaskModelsData();
 
-        private Timer timer1;
 
         //private int lastYPosition = 0;
         //private int increment = 25;
@@ -37,7 +36,6 @@ namespace TDMForms
 
 
             updateListBox();
-            InitLoop();
             
 
             /*
@@ -56,18 +54,19 @@ namespace TDMForms
             */
         }
 
-        public void InitLoop()
+        public void updateListBox()
         {
-            timer1 = new Timer();
-            timer1.Tick += new EventHandler(timer1_Tick);
-            timer1.Interval = 2000; // in miliseconds
-            timer1.Start();
+            allTaks = GlobalConfig.Connection.GetTaskModelsData();
+
+            taskListBox.DataSource = null;
+            datesListBox.DataSource = null;
+
+            taskListBox.DataSource = allTaks;
+            datesListBox.DataSource = allTaks;
+            taskListBox.DisplayMember = "Name";
+            datesListBox.DisplayMember = "FinishDay";
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            updateListBox();
-        }
 
         private void addNewTaskButton_Click(object sender, EventArgs e)
         {
@@ -84,18 +83,6 @@ namespace TDMForms
 
             //GenerateInfoButton(task.Id, task.Descritpion, 0, lastYPosition + increment);
 
-        }
-
-
-        public void updateListBox()
-        {
-            taskListBox.DataSource = null;
-            datesListBox.DataSource = null;
-
-            taskListBox.DataSource = allTaks;
-            datesListBox.DataSource = allTaks;
-            taskListBox.DisplayMember = "Name";
-            datesListBox.DisplayMember = "FinishDay";
         }
 
 
@@ -129,7 +116,7 @@ namespace TDMForms
         private void CreateTaskInfoWindow(int id, string name, string description)
         {
         
-            TaskInfo taskInfo = new TaskInfo(this ,id ,name, description);
+            TaskInformation taskInfo = new TaskInformation(this ,id ,name, description);
             taskInfo.Show();
 
         }

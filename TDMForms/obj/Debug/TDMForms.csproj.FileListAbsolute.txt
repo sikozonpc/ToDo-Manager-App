@@ -30,4 +30,4 @@ C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.csproj.C
 C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.exe
 C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.pdb
 C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.csprojAssemblyReference.cache
-C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.TaskInfo.resources
+C:\Users\Sikoz\Desktop\ToDoManager Solution\TDMForms\obj\Debug\TDMForms.TaskInformation.resources

@@ -39,27 +39,27 @@ namespace TDMLibrary.DataAccess
         public static List<TaskModel> ConvertToTaskModel(this List<string> lines)
         {
             List<TaskModel> output = new List<TaskModel>();
-
-
-            foreach(string line in lines)
+            int lineIndex = 0;
+   
+            foreach (string line in lines)
             {
-                // Remove spaces from the descritpion
-                //line.Replace(System.Environment.NewLine, "1");
-                
-                // TODO - Split into sections to populate the model 
                 string[] cols = line.Split('|');
 
                 TaskModel model = new TaskModel();
 
-                // TODO - Error Cheking 
+                if (cols.Length != 5)
+                {
+                    break;
+                }
 
+ 
                 model.Id = int.Parse(cols[0]);
                 model.Name = cols[1];
                 model.Descritpion = cols[2];
                 model.FinishDay = cols[3];
-                // TODO convert bool
+
                 model.Completed = Boolean.Parse(cols[4]);
-                
+
                 output.Add(model);
             }
 
@@ -89,6 +89,11 @@ namespace TDMLibrary.DataAccess
             }
 
             File.WriteAllLines(fileName.FullFilePath(), lines);
+        }
+
+        public static string ConnectLines(string line1, string line2)
+        {
+            return line1 + " "+ line2;
         }
 
     }

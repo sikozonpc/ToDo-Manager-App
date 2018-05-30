@@ -66,6 +66,7 @@
     <Compile Include="TaskInfo.Designer.cs">
       <DependentUpon>TaskInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="TextRefractor.cs" />
     <EmbeddedResource Include="AddTaskForm.resx">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -55,9 +55,10 @@ namespace TDMForms
                 // Closes the window
                 this.Close();
             } 
+
         }
 
-        public string RemoveLines(string line)
+        private string RemoveLines(string line)
         {
 
             string result = Regex.Replace(line, @"\r\n", " ");

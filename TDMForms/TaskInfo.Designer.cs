@@ -1,6 +1,6 @@
 ﻿namespace TDMForms
 {
-    partial class TaskInfo
+    partial class TaskInformation
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskInformation));
             this.InfoTextBox = new System.Windows.Forms.RichTextBox();
             this.SaveEditButton = new System.Windows.Forms.Button();
             this.TaskInfoTitleLabel = new System.Windows.Forms.Label();
@@ -35,48 +36,36 @@
             // 
             // InfoTextBox
             // 
-            this.InfoTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.InfoTextBox, "InfoTextBox");
             this.InfoTextBox.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.InfoTextBox.Location = new System.Drawing.Point(12, 42);
             this.InfoTextBox.Name = "InfoTextBox";
-            this.InfoTextBox.Size = new System.Drawing.Size(411, 121);
-            this.InfoTextBox.TabIndex = 0;
-            this.InfoTextBox.Text = "";
             // 
             // SaveEditButton
             // 
-            this.SaveEditButton.Location = new System.Drawing.Point(358, 169);
+            resources.ApplyResources(this.SaveEditButton, "SaveEditButton");
             this.SaveEditButton.Name = "SaveEditButton";
-            this.SaveEditButton.Size = new System.Drawing.Size(75, 23);
-            this.SaveEditButton.TabIndex = 1;
-            this.SaveEditButton.Text = "Save Edit";
             this.SaveEditButton.UseVisualStyleBackColor = true;
             this.SaveEditButton.Click += new System.EventHandler(this.SaveEditButton_Click);
             // 
             // TaskInfoTitleLabel
             // 
-            this.TaskInfoTitleLabel.AutoSize = true;
-            this.TaskInfoTitleLabel.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaskInfoTitleLabel.Location = new System.Drawing.Point(12, 9);
+            resources.ApplyResources(this.TaskInfoTitleLabel, "TaskInfoTitleLabel");
             this.TaskInfoTitleLabel.Name = "TaskInfoTitleLabel";
-            this.TaskInfoTitleLabel.Size = new System.Drawing.Size(0, 28);
-            this.TaskInfoTitleLabel.TabIndex = 2;
             // 
-            // TaskInfo
+            // TaskInformation
             // 
-            this.AccessibleName = "Task Info Window";
+            resources.ApplyResources(this, "$this");
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.PropertyPage;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 194);
             this.Controls.Add(this.TaskInfoTitleLabel);
             this.Controls.Add(this.SaveEditButton);
             this.Controls.Add(this.InfoTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "TaskInfo";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TaskInfo";
+            this.MaximizeBox = false;
+            this.Name = "TaskInformation";
+            this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 
