@@ -16,7 +16,7 @@ Simple UI's created and implemented.
 
 Most of the code in the library.
 
-
+Complete the UI with a cleaner and professional look.
 
 ## To Do
 
@@ -25,8 +25,6 @@ Priority orginazation
 Add Tags.
 
 Option to send to mail.
-
-Complete the UI with a cleaner and professional look.
 
 Modulize better the code.
 
