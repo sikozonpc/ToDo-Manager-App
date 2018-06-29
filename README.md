@@ -39,10 +39,6 @@ Add themes.
 Add Databackup option.
 
 
-## Future To Do'
-Integrate an Addon for .Net web service;
-
-
 # License
 Feel free to commit your changes and requests. I would be very interested in any work that originates from this project. I would be more than happy to hear from your impressions and results.
 
