@@ -1,5 +1,5 @@
 # ToDo-Manager-App
-Code for the open source project ToDo Manager, (not the final name, haven't tought of one) 
+Code for the open source project ToDo Manager.
 
 # Current UI status
 ![Screenshot](https://github.com/sikozonpc/ToDo-Manager-App/blob/master/FirstUI%20screenshot.png)
