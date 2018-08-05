@@ -1,7 +1,7 @@
 # ToDo-Manager-App
 Code for the open source project ToDo Manager, (not the final name, haven't tought of one) 
 
-![UI]("https://github.com/sikozonpc/ToDo-Manager-App/blob/master/FirstUI%20screenshot.png")
+![UI](https://github.com/sikozonpc/ToDo-Manager-App/blob/master/FirstUI%20screenshot.png "Screenshot")
 
 
 # Status: 
