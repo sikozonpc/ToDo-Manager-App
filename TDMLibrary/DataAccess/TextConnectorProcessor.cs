@@ -75,7 +75,19 @@ namespace TDMLibrary.DataAccess
             {
                 lines.Add($"{ task.Id }|{ task.Name }|{ task.Descritpion }|{ task.FinishDay }|{ task.Completed }");
 
-                File.WriteAllLines(fileName.FullFilePath(), lines);
+                try
+                {
+                    File.WriteAllLines(fileName.FullFilePath(), lines);
+                }
+                catch
+                {
+                    // Creates a new folder 
+                    System.IO.Directory.CreateDirectory( ConfigurationManager.AppSettings["filePath"] );
+                }
+                finally
+                {
+                    File.WriteAllLines(fileName.FullFilePath(), lines);
+                }
             }
         }
 

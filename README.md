@@ -1,8 +1,7 @@
 # ToDo-Manager-App
-Code for the open source project ToDo Manager.
+Code for the open source project ToDo Manager, (not the final name, haven't tought of one) 
 
-# Current UI status
-![Screenshot](https://github.com/sikozonpc/ToDo-Manager-App/blob/master/FirstUI%20screenshot.png)
+
 
 # Status: 
 
@@ -16,7 +15,7 @@ Simple UI's created and implemented.
 
 Most of the code in the library.
 
-Complete the UI with a cleaner and professional look.
+
 
 ## To Do
 
@@ -25,6 +24,8 @@ Priority orginazation
 Add Tags.
 
 Option to send to mail.
+
+Complete the UI with a cleaner and professional look.
 
 Modulize better the code.
 
@@ -37,6 +38,10 @@ Add Reminders.
 Add themes.
 
 Add Databackup option.
+
+
+## Future To Do'
+Integrate an Addon for .Net web service;
 
 
 # License

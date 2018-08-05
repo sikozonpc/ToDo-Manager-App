@@ -113,10 +113,10 @@ namespace TDMForms
         }
 
 
-        private void CreateTaskInfoWindow(int id, string name, string description)
+        private void CreateTaskInfoWindow(int id, string name, string description, string date)
         {
         
-            TaskInformation taskInfo = new TaskInformation(this ,id ,name, description);
+            TaskInformation taskInfo = new TaskInformation(this ,id ,name, description, date);
             taskInfo.Show();
 
         }
@@ -150,7 +150,7 @@ namespace TDMForms
         private void taskListBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             TaskModel selectedItem = (TaskModel)taskListBox.SelectedItem;
-            CreateTaskInfoWindow(selectedItem.Id ,selectedItem.Name, selectedItem.Descritpion);
+            CreateTaskInfoWindow(selectedItem.Id ,selectedItem.Name, selectedItem.Descritpion, selectedItem.FinishDay);
 
         }
     }

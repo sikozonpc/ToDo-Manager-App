@@ -67,5 +67,14 @@ namespace TDMForms
             return result;
         }
 
+        private void closeTaskWindowButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void AddTaskForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
